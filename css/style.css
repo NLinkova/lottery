@@ -1,0 +1,203 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(49, 21, 47);
+    font-size: 20px;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+}
+
+h1 {
+    text-rendering: optimizeLegibility;
+    -webkit-text-stroke: 1px #fafafa;
+    max-width: 800px;
+    display: block;
+    text-align: center;
+    font-style: italic;
+    color:#f103a2;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.logo {
+    width: 200px;   
+    margin: 10px;
+}
+
+.container {
+    padding: 16px;
+    background-color: white;    
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.grid {    
+    max-width: 100%;
+    display: grid;
+    margin: 0 auto;
+    gap: 20px 17px;
+    justify-items: start;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: baseline;
+    margin: 5px;
+}
+
+#agree {
+    margin: 0;
+    width: 30px;
+}
+
+.agree {
+    font-size: 14px;    
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 0px 0 15px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+    background: #f1f1f1;
+    font-size: 20px;
+}
+
+input:focus {
+    background-color: rgb(248, 169, 218);
+    outline: none;
+}
+
+/* это условие задает что формы окращиваются в красный если они в фокусе и не валидны */
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: red solid 2px;
+}
+input:not(:focus):not(:placeholder-shown):invalid + .error {
+    display: block;
+} 
+
+.error {    
+    display: none;
+    color: magenta;
+    font-size: 14px;
+}
+
+.registerbtn {
+    background-color: #6d04aa;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.7;
+    font-size: 24px;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+
+.required:after { 
+    content: "*"; 
+    color: red;
+    display: inline;
+}
+
+.input-text {
+    display: inline-block;
+    position: relative;
+}
+.input-text::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f303';
+    font-weight: 900;
+    position: absolute;
+    right: 5px;
+    bottom: 1.3em;
+}
+
+.input-email {
+    display: inline-block;
+    position: relative;
+}
+.input-email::after {
+    font-family: "Font Awesome 5 Free";
+    content: '\f0e0';
+    font-weight: 900;
+    position: absolute;
+    right: 5px;
+    bottom: 1.3em;
+}
+
+.link-wrapper {
+    width: 50px;
+}
+
+a {
+    text-decoration: none;
+    transition: opacity 0.2s linear;
+    opacity: 1;
+}
+
+.link-wrapper:hover img {
+    display: block;
+}
+
+.video {
+    position: fixed;
+    bottom: 100px;
+    left: 25vw;
+    max-width: 50%;
+    max-height: 50%;
+    display: none;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+@media screen and (max-width: 580px) {
+    body {        
+        font-size: 14px;
+    }
+    .logo {
+        width: 100px;  
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .agree {
+        font-size: 10px;    
+    }
+    
+    input {
+        font-size: 14px;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .registerbtn {
+        font-size: 14px;
+    }
+}
