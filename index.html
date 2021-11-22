@@ -13,7 +13,7 @@
     <h1>Register and win a car of your dream!</h1>
     <img src="./media/logo.svg" alt="logo of the lottery" class="logo">
   </header>
-  <form class="container" onsubmit="checkForm()" action="#" method="" id="my-form" novalidate>
+  <form class="container" onsubmit="checkForm()" action="#" method="post" id="my-form" novalidate>
     <fieldset class="grid">        
       <legend>A great Lottery!</legend>
       <div class="input-field">
@@ -49,7 +49,7 @@
         title="Choose DOB only after 1948">
         <div id="date_error" class="error">Please choose DOB only after 1948</div>        
       </div>
-      <label class="select required hidden" for="pick" >Choose your number...</label>
+      <label class="select required hidden" for="select" >Choose your number...</label>
         <select id="select">
           <option value="">Choose one number...</option>
           <option value="1">1</option>
@@ -65,7 +65,7 @@
       </div>
       <div class="link-wrapper">
         <a href="" id="help-link">Help</a>
-        <img class="video" src="./media/help.gif" alt="helping video"></img>
+        <img class="video" src="./media/help.gif" alt="helping video">
     </div>
       <button disabled type="submit" id="submit" class="registerbtn">Register</button>
     </fieldset>
