@@ -54,7 +54,7 @@ h1 {
 .flex {
     display: flex;
     flex-direction: row;
-    justify-content: baseline;
+    justify-content: center;
     align-items: baseline;
     margin: 5px;
 }
@@ -116,7 +116,6 @@ input:not(:focus):not(:placeholder-shown):invalid + .error {
     opacity: 1;
 }
 
-
 .required:after { 
     content: "*"; 
     color: red;
@@ -140,6 +139,7 @@ input:not(:focus):not(:placeholder-shown):invalid + .error {
     display: inline-block;
     position: relative;
 }
+
 .input-email::after {
     font-family: "Font Awesome 5 Free";
     content: '\f0e0';
@@ -178,6 +178,7 @@ a {
     body {        
         font-size: 14px;
     }
+    
     .logo {
         width: 100px;  
     }

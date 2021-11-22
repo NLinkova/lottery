@@ -22,7 +22,8 @@
             <input type="text" class="text" placeholder="Enter First Name" id="first_name" 
             name="fname" pattern="[A-Za-z ]{1,32}" maxlength="20" 
             title="Type latin characters only" required>
-            <div id="first_error" class="error">Please enter only latin characters</div>
+            <div id="first_error" class="error">Please enter only latin characters              
+            </div>
           </div>         
       </div>
       <div class="input-field">
@@ -31,7 +32,8 @@
           <input type="text" placeholder="Enter Last Name" id="last_name"
           name="lname" pattern="[A-Za-z ]{1,32}" maxlength="20"
           title="Type latin characters only" required>
-          <div id="last_error" class="error">Please enter only latin characters</div>
+          <div id="last_error" class="error">Please enter only latin characters            
+          </div>
         </div>        
       </div>
       <div class="input-field">
@@ -40,14 +42,16 @@
           <input type="email" placeholder="Email" id="email" name="email"
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="40" 
           title="Type latin characters only" required>
-          <div id="email_error" class="error">Please enter only latin characters, @ and .</div>
+          <div id="email_error" class="error">Please enter only latin characters, @ and .            
+          </div>
         </div>
       </div>
       <div class="input-field hidden">
         <label for="birthday"><b>Birthday</b></label>        
         <input type="date" id="birthday" name="birthday" min="1949-01-01" max="2021-10-01"
         title="Choose DOB only after 1948">
-        <div id="date_error" class="error">Please choose DOB only after 1948</div>        
+        <div id="date_error" class="error">Please choose DOB only after 1948          
+        </div>        
       </div>
       <label class="select required hidden" for="select" >Choose your number...</label>
         <select id="select">
@@ -61,7 +65,8 @@
         <input type="checkbox" id="agree" name="agree" value="submit"
         onclick="disabledSubmit()">  
         <label for="agree" class="required agree">By filling this form you agree to our Terms & Privacy</label>
-        <div id="agree_error" class="error"></div>
+        <div id="agree_error" class="error">          
+        </div>
       </div>
       <div class="link-wrapper">
         <a href="" id="help-link">Help</a>
@@ -70,7 +75,5 @@
       <button disabled type="submit" id="submit" class="registerbtn">Register</button>
     </fieldset>
   </form>
-
 </body>
-
 </html>
