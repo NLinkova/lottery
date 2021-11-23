@@ -1,79 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build a registration Form</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/script.js" defer></script>
-</head>
-<body>
-  <header>
-    <h1>Register and win a car of your dream!</h1>
-    <img src="./media/logo.svg" alt="logo of the lottery" class="logo">
-  </header>
-  <form class="container" onsubmit="checkForm()" action="#" method="post" id="my-form" novalidate>
-    <fieldset class="grid">        
-      <legend>A great Lottery!</legend>
-      <div class="input-field">
-        <label for="first_name" class="required hidden"><b>First name</b></label>        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build a registration Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Register and win a car of your dream!</h1>
+      <img src="./media/logo.svg" alt="logo of the lottery" class="logo" />
+    </header>
+    <form
+      class="container"
+      onsubmit="checkForm()"
+      action="#"
+      method="post"
+      id="my-form"
+      novalidate
+    >
+      <fieldset class="grid">
+        <legend>A great Lottery!</legend>
+        <div class="input-field">
+          <label for="first_name" class="required hidden"
+            ><b>First name</b></label
+          >
           <div class="input-text">
-            <input type="text" class="text" placeholder="Enter First Name" id="first_name" 
-            name="fname" pattern="[A-Za-z ]{1,32}" maxlength="20" 
-            title="Type latin characters only" required>
-            <div id="first_error" class="error">Please enter only latin characters              
+            <input
+              type="text"
+              class="text"
+              placeholder="Enter First Name"
+              id="first_name"
+              name="fname"
+              pattern="[A-Za-z ]{1,32}"
+              maxlength="20"
+              title="Type latin characters only"
+              required
+            />
+            <div id="first_error" class="error">
+              Please enter only latin characters
             </div>
-          </div>         
-      </div>
-      <div class="input-field">
-        <label for="last_name" class="required hidden"><b>Last name</b></label>
-        <div class="input-text">
-          <input type="text" placeholder="Enter Last Name" id="last_name"
-          name="lname" pattern="[A-Za-z ]{1,32}" maxlength="20"
-          title="Type latin characters only" required>
-          <div id="last_error" class="error">Please enter only latin characters            
-          </div>
-        </div>        
-      </div>
-      <div class="input-field">
-        <label for="email" class="required hidden"><b>Email</b></label>
-        <div class="input-email">
-          <input type="email" placeholder="Email" id="email" name="email"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="40" 
-          title="Type latin characters only" required>
-          <div id="email_error" class="error">Please enter only latin characters, @ and .            
           </div>
         </div>
-      </div>
-      <div class="input-field hidden">
-        <label for="birthday"><b>Birthday</b></label>        
-        <input type="date" id="birthday" name="birthday" min="1949-01-01" max="2021-10-01"
-        title="Choose DOB only after 1948">
-        <div id="date_error" class="error">Please choose DOB only after 1948          
-        </div>        
-      </div>
-      <label class="select required hidden" for="select" >Choose your number...</label>
+        <div class="input-field">
+          <label for="last_name" class="required hidden"
+            ><b>Last name</b></label
+          >
+          <div class="input-text">
+            <input
+              type="text"
+              placeholder="Enter Last Name"
+              id="last_name"
+              name="lname"
+              pattern="[A-Za-z ]{1,32}"
+              maxlength="20"
+              title="Type latin characters only"
+              required
+            />
+            <div id="last_error" class="error">
+              Please enter only latin characters
+            </div>
+          </div>
+        </div>
+        <div class="input-field">
+          <label for="email" class="required hidden"><b>Email</b></label>
+          <div class="input-email">
+            <input
+              type="email"
+              placeholder="Email"
+              id="email"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              maxlength="40"
+              title="Type latin characters only"
+              required
+            />
+            <div id="email_error" class="error">
+              Please enter only latin characters, @ and .
+            </div>
+          </div>
+        </div>
+        <div class="input-field hidden">
+          <label for="birthday"><b>Birthday</b></label>
+          <input
+            type="date"
+            id="birthday"
+            name="birthday"
+            min="1949-01-01"
+            max="2021-10-01"
+            title="Choose DOB only after 1948"
+          />
+          <div id="date_error" class="error">
+            Please choose DOB only after 1948
+          </div>
+        </div>
+        <label class="select required hidden" for="select"
+          >Choose your number...</label
+        >
         <select id="select">
           <option value="">Choose one number...</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-        </select>  
-      <div class="flex">
-        <input type="checkbox" id="agree" name="agree" value="submit"
-        onclick="disabledSubmit()">  
-        <label for="agree" class="required agree">By filling this form you agree to our Terms & Privacy</label>
-        <div id="agree_error" class="error">          
+        </select>
+        <div class="flex">
+          <input
+            type="checkbox"
+            id="agree"
+            name="agree"
+            value="submit"
+            onclick="disabledSubmit()"
+          />
+          <label for="agree" class="required agree"
+            >By filling this form you agree to our Terms & Privacy</label
+          >
+          <div id="agree_error" class="error"></div>
         </div>
-      </div>
-      <div class="link-wrapper">
-        <a href="" id="help-link">Help</a>
-        <img class="video" src="./media/help.gif" alt="helping video">
-    </div>
-      <button disabled type="submit" id="submit" class="registerbtn">Register</button>
-    </fieldset>
-  </form>
-</body>
+        <div class="link-wrapper">
+          <a href="" id="help-link">Help</a>
+          <img class="video" src="./media/help.gif" alt="helping video" />
+        </div>
+        <button disabled type="submit" id="submit" class="registerbtn">
+          Register
+        </button>
+      </fieldset>
+    </form>
+  </body>
 </html>
